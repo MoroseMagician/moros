@@ -3,11 +3,13 @@ import { createMaterialTopTabNavigator, createAppContainer, } from 'react-naviga
 
 import HomeScreen from '../screens/HomeScreen';
 import DetailsScreen from '../screens/DetailsScreen';
+import JournalScreen from '../screens/JournalScreen';
 
 const TopTabNavigator = createMaterialTopTabNavigator(
   {
     Home: HomeScreen,
     Details: DetailsScreen,
+    Journal: JournalScreen,
   },
   {
     initialRouteName: 'Home',
