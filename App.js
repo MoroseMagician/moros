@@ -1,13 +1,18 @@
 import React from 'react';
-import { View, StatusBar, StyleSheet } from 'react-native';
-import TopTabNavigator from './navigation/TopTabNavigator';
+import {
+  View,
+  StatusBar,
+  StyleSheet,
+} from 'react-native';
+
+import AppNavigator from './navigation/AppNavigator';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.app}>
         <StatusBar hidden />
-        <TopTabNavigator  />
+        <AppNavigator />
       </View>
     );
   }

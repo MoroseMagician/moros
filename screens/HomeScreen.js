@@ -1,5 +1,11 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { 
+  AsyncStorage,
+  View,
+  Text,
+  StyleSheet,
+  Button,
+} from 'react-native';
 
 import MainContainer from '../components/MainContainer';
 
@@ -12,8 +18,14 @@ export default class HomeScreen extends React.Component {
     return (
       <MainContainer>
         <Text style={styles.text}>Hello, home!</Text>
+        <Button title="Sign out" onPress={this.logoutAsync} />
       </MainContainer>
     );
+  }
+
+  logoutAsync = async () => {
+    await AsyncStorage.clear();
+    this.props.navigation.navigate('Auth');
   }
 }
 
